@@ -1,0 +1,46 @@
+//
+//  PrefixHeader.pch
+//  iOS_百思不得姐项目
+//
+//  Created by ibokanwisdom on 16/7/7.
+//  Copyright © 2016年 IbokanWisdom. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+/** 头文件 */
+#import "UIView+CHBExtension.h"
+#import "UIBarButtonItem+CHBBarButtonItem.h"
+#import "CHBConst.h"
+#import "NSCalendar+CHBExtension.h"
+
+/** 屏幕适配 */
+#define CHBScreenW [UIScreen mainScreen].bounds.size.width
+#define CHBScreenH [UIScreen mainScreen].bounds.size.height
+#define iphone6P   (CHBScreenH == 736)
+#define iphone6    (CHBScreenH == 667)
+#define iphone5    (CHBScreenH == 568)
+#define iphone4    (CHBScreenH == 480)
+
+/** 日志 */
+#ifdef DEBUG
+#define CHBLog(...) NSLog(__VA_ARGS__);
+#else
+#define CHBLog(...)
+#endif
+
+/** 测试函数 */
+#define CHBFunc NSLog(@"%s",__func__);
+
+/** 颜色 */
+#define CHBColorRGBA(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+#define CHBColorRGB(r,g,b)  CHBColorRGBA(r,g,b,255)
+#define CHBColorRandom  CHBColorRGB(arc4random_uniform(256),arc4random_uniform(256),arc4random_uniform(256))
+#define CHBColorGray(g) CHBColorRGB(g,g,g)
+#define CHBCommonColor CHBColorGray(206)
+#endif
+
+
+#endif /* PrefixHeader_pch */

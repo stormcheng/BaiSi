@@ -1,0 +1,22 @@
+//
+//  CHBAllController.m
+//  BuDeJie11
+//
+//  Created by ibokanwisdom on 16/7/22.
+//  Copyright © 2016年 IbokanWisdom. All rights reserved.
+//
+
+#import "CHBAllController.h"
+@interface CHBAllController ()
+
+@end
+
+@implementation CHBAllController
+
+-(void)viewDidLoad{
+    [super viewDidLoad];
+}
+-(CHBTopicType)type{
+    return CHBTopicTypeAll;
+}
+@end

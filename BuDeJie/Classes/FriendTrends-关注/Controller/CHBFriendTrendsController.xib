@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CHBFriendTrendsController">
+            <connections>
+                <outlet property="view" destination="4hj-Wv-8Gu" id="eaE-Ot-I9L"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="4hj-Wv-8Gu">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_cry_icon" translatesAutoresizingMaskIntoConstraints="NO" id="cGR-Av-SN6">
+                    <rect key="frame" x="164" y="177" width="48" height="49"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="49" id="h6l-h8-PrJ"/>
+                    </constraints>
+                </imageView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jLg-16-PfD">
+                    <rect key="frame" x="68" y="275" width="240" height="94"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="94" id="xBC-gP-Ey9"/>
+                        <constraint firstAttribute="width" constant="240" id="ycy-QT-tYT"/>
+                    </constraints>
+                    <string key="text">快快登录吧，关注百思最in牛人
+好友动态，让你过吧瘾儿~
+欧耶~~~！</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeF-FA-j1Q">
+                    <rect key="frame" x="66" y="400" width="243" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="VVl-Fp-WpD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="立即登录注册" backgroundImage="friendsTrend_login">
+                        <color key="titleColor" red="1" green="0.053981122100000001" blue="0.1009954718" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="friendsTrend_login_click"/>
+                    <connections>
+                        <action selector="loginOrRegist:" destination="-1" eventType="touchUpInside" id="gho-LU-IlG"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+            <constraints>
+                <constraint firstItem="oeF-FA-j1Q" firstAttribute="top" secondItem="jLg-16-PfD" secondAttribute="bottom" constant="31" id="DLS-4m-agL"/>
+                <constraint firstItem="cGR-Av-SN6" firstAttribute="centerX" secondItem="4hj-Wv-8Gu" secondAttribute="centerX" id="YSe-e5-kyg"/>
+                <constraint firstItem="oeF-FA-j1Q" firstAttribute="centerX" secondItem="jLg-16-PfD" secondAttribute="centerX" id="dzM-sv-hfO"/>
+                <constraint firstItem="jLg-16-PfD" firstAttribute="centerX" secondItem="cGR-Av-SN6" secondAttribute="centerX" id="ggd-Px-hCC"/>
+                <constraint firstItem="jLg-16-PfD" firstAttribute="top" secondItem="cGR-Av-SN6" secondAttribute="bottom" constant="49" id="iUC-wI-w7E"/>
+                <constraint firstItem="cGR-Av-SN6" firstAttribute="top" secondItem="4hj-Wv-8Gu" secondAttribute="top" constant="177" id="oYr-ig-pjX"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="friendsTrend_login" width="243" height="48"/>
+        <image name="friendsTrend_login_click" width="243" height="48"/>
+        <image name="header_cry_icon" width="48" height="48"/>
+    </resources>
+</document>
