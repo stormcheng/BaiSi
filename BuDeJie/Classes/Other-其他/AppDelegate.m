@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "CHBTabBarController.h"
 #import "CHBLaunchController.h"
 #import <SDWebImageManager.h>
 #import <AFNetworking.h>
@@ -20,7 +19,7 @@
 //    创建窗口
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
 //    设置窗口根控制器
-    self.window.rootViewController = [[CHBTabBarController alloc]init];
+    self.window.rootViewController = [[CHBLaunchController alloc]init];
 //    窗口显示
     [self.window makeKeyAndVisible];
 //    开始监控网络
